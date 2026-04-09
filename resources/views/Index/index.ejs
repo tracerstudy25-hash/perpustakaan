@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2563EB">
-    <title>Library</title>
-    <link rel="stylesheet" href="/css/app.css">
-    <link rel="icon" href="/images/iconperpustakaan.png" type="jpg/png">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="theme-color" content="#2563EB">
+ <title>Library</title>
+ <link rel="stylesheet" href="/css/app.css">
+ <link rel="icon" href="/images/iconperpustakaan.png" type="jpg/png">
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline text-red-500">
-     Library
-    </h1>
+    <div class="min-h-screen bg-gradient-to-br from-blue-200 via-white to-purple-200">
+        <nav class="fixed top-4 left-0 w-full px-4 z-50">
+            <div class="backdrop-blur-xl bg-white/20 border border-white/30 shadow-md rounded-[30px] px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <!-- LEFT LOGO -->
+                    <div class="flex items-center gap-2">
+                     <img class="h-10 w-10 md:w-12 md:h-12 object-contain" src="/images/navbarbook.png" alt="booksnavbar">
+                     <span class="text-black font-bold text-3xl"><span class="text-blue-600">Lib</span>rary</span>
+                    </div>
+                    <!-- RIGHT GROUP -->
+                    <div class="flex items-center gap-6">
+                        <!-- DESKTOP MENU -->
+                        <div class="hidden md:flex gap-6 text-gray-700">
+                            <span class="flex flex-col items-center">
+                                <a href="" class="relative group hover:text-blue-600 text-gray-700 leading-none text-base font-normal">
+                                 Home
+                                 <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                            </span>
+                            <span class="flex flex-col items-center">
+                                <a href="" class="relative group hover:text-blue-600 text-gray-700 leading-none text-base font-normal">
+                                 Pages
+                                 <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                            </span>
+                            <span class="flex flex-col items-center">
+                                <a href="" class="relative group hover:text-blue-600 text-gray-700 leading-none text-base font-normal">
+                                 About
+                                 <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                            </span>
+                            <span class="flex flex-col items-center">
+                                <a href="" class="relative group hover:text-blue-600 text-gray-700 leading-none text-base font-normal">
+                                 Contact
+                                 <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                            </span>
+                        </div>
+                        <!-- LOGIN -->
+                        <div class="gap-1 hidden md:inline-block">
+                            <a href="" class="font-semibold bg-[#000000] text-white px-4 py-2 rounded-[30px] transition flex items-center gap-3">
+                             Login
+                                <span class="w-7 h-7 rounded-full bg-white flex items-center justify-center">
+                                 <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.6 4.602h10m-4-4 4 4-4 4" stroke="#3f3f47" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- HAMBURGER -->
+                        <button id="menuBtn" class="md:hidden text-gray-800 text-2xl cursor-pointer">
+                         <img class="h-7 w-7" src="/svg/hamburger.svg" alt="hamburger">
+                        </button>
+                    </div>
+                </div>
+                <!-- MOBILE MENU -->
+                <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+                    <div class="flex flex-col gap-2 mt-4 text-gray-700">
+                        <span class="hover:bg-white/30 hover:backdrop-blur-md rounded-[5px] transition duration-300 py-2 px-2">
+                         <a class="text-base font-normal" href="">Home</a>
+                        </span>
+                        <span class="hover:bg-white/30 hover:backdrop-blur-md rounded-[5px] transition duration-300 py-2 px-2">
+                         <a class="text-base font-normal" href="">Pages</a>
+                        </span>
+                        <span class="hover:bg-white/30 hover:backdrop-blur-md rounded-[5px] transition duration-300 py-2 px-2">
+                         <a class="text-base font-normal" href="">About</a>
+                        </span>
+                        <span class="hover:bg-white/30 hover:backdrop-blur-md rounded-[5px] transition duration-300 py-2 px-2">
+                         <a class="text-base font-normal" href="">Contact</a>
+                        </span>
+                        <span class="flex flex-col">
+                         <a href="" class="mt-2 bg-[#000000] text-white px-4 py-2 rounded-[20px] text-center font-semibold">Login</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script>
+     const btn = document.getElementById('menuBtn');
+     const menu = document.getElementById('mobileMenu');
+     let open = false;
+        btn.addEventListener('click', () => {
+            open = !open;
+            if (open) {
+             menu.classList.remove('max-h-0');
+             menu.classList.add('max-h-[500px]');
+            } else {
+             menu.classList.remove('max-h-[500px]');
+             menu.classList.add('max-h-0');   
+            }
+        });
+    </script>
 </body>
 </html>
