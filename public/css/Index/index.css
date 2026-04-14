@@ -1,0 +1,13 @@
+@media (max-width: 300px) {
+    .responsive-css {
+        word-break: break-all;
+    }
+    .bawah-css {
+     flex-direction: column;
+    }
+}
+@media (max-width: 324px) {
+    .ukuran-css {
+        font-size: 12px;
+    }
+}
