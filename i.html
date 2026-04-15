@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Smoke Cursor Effect</title>
+<style>
+  
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  h1 {
+  position: relative;
+  z-index: 1; /* di depan */
+}
+</style>
+</head>
+<body>
+<h1 style="color: red;">ikan</h1>
+<canvas id="smoke"></canvas>
+
+<script>
+const canvas = document.getElementById("smoke");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+document.addEventListener("mousemove", (e) => {
+  for (let i = 0; i < 5; i++) {
+    particles.push({
+      x: e.clientX,
+      y: e.clientY,
+      size: Math.random() * 10 + 5,
+      color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+      vx: (Math.random() - 0.5) * 2,
+      vy: (Math.random() - 0.5) * 2,
+      alpha: 1
+    });
+  }
+});
+
+function animate() {
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach((p, index) => {
+    p.x += p.vx;
+    p.y += p.vy;
+    p.size *= 0.96;
+    p.alpha -= 0.02;
+
+    ctx.beginPath();
+    ctx.fillStyle = `hsla(${p.color.match(/\d+/)[0]}, 100%, 60%, ${p.alpha})`;
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (p.alpha <= 0) {
+      particles.splice(index, 1);
+    }
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
