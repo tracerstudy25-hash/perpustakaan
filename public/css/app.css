@@ -209,6 +209,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -284,17 +287,8 @@
   .table {
     display: table;
   }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
   .h-7 {
     height: calc(var(--spacing) * 7);
-  }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
   }
   .h-9 {
     height: calc(var(--spacing) * 9);
@@ -307,9 +301,6 @@
   }
   .h-\[2px\] {
     height: 2px;
-  }
-  .h-\[20px\] {
-    height: 20px;
   }
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
@@ -512,6 +503,9 @@
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .pt-44 {
     padding-top: calc(var(--spacing) * 44);
