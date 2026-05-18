@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimoni</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+::-webkit-scrollbar { display: none; }
+
+/* DOT ACTIVE */
+.dot.active {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  width: 22px;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+</style>
+</head>
+
+<body class="bg-white">
+
+<section class="py-20 px-4">
+
+  <!-- HEADER -->
+  <div class="text-center max-w-2xl mx-auto">
+    <p class="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      Testimoni
+    </p>
+
+    <h2 class="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+      Apa Kata Pengguna
+    </h2>
+  </div>
+
+  <!-- WRAPPER -->
+  <div class="relative mt-12 max-w-6xl mx-auto">
+
+    <!-- BUTTON LEFT -->
+    <button onclick="scrollLeftFn()" 
+      class="absolute left-0 top-1/2 -translate-y-1/2 z-10 
+             bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center">
+      ❮
+    </button>
+
+    <!-- SLIDER -->
+    <div id="slider" 
+      class="flex items-start gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-10">
+
+      <!-- CARD -->
+      <div class="snap-start min-w-[280px] md:min-w-[350px] bg-white border border-gray-200 rounded-xl p-6">
+        <div class="text-yellow-400 mb-3">★★★★★</div>
+        <p class="text-gray-600 text-sm">
+          Sistem perpustakaan ini sangat membantu dalam mengelola data buku dan anggota dengan cepat dan efisien.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">A</div>
+          <div>
+            <p class="font-semibold text-sm">Ahmad</p>
+            <p class="text-xs text-gray-500">Mahasiswa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="snap-start min-w-[280px] md:min-w-[350px] bg-white border border-gray-200 rounded-xl p-6">
+        <div class="text-yellow-400 mb-3">★★★★★</div>
+        <p class="text-gray-600 text-sm">
+          Aplikasi ini sangat mudah digunakan bahkan untuk pemula sekalipun.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">B</div>
+          <div>
+            <p class="font-semibold text-sm">Budi</p>
+            <p class="text-xs text-gray-500">Admin</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="snap-start min-w-[280px] md:min-w-[350px] bg-white border border-gray-200 rounded-xl p-6">
+        <div class="text-yellow-400 mb-3">★★★★★</div>
+        <p class="text-gray-600 text-sm">
+          Desainnya modern dan nyaman digunakan dalam waktu lama tanpa membosankan.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">C</div>
+          <div>
+            <p class="font-semibold text-sm">Citra</p>
+            <p class="text-xs text-gray-500">User</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="snap-start min-w-[280px] md:min-w-[350px] bg-white border border-gray-200 rounded-xl p-6">
+        <div class="text-yellow-400 mb-3">★★★★★</div>
+        <p class="text-gray-600 text-sm">
+          Fitur lengkap membuat pekerjaan lebih cepat selesai tanpa ribet.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">D</div>
+          <div>
+            <p class="font-semibold text-sm">Dewi</p>
+            <p class="text-xs text-gray-500">Staff</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="snap-start min-w-[280px] md:min-w-[350px] bg-white border border-gray-200 rounded-xl p-6">
+        <div class="text-yellow-400 mb-3">★★★★★</div>
+        <p class="text-gray-600 text-sm">
+          Sangat membantu meningkatkan efisiensi kerja di perpustakaan.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">E</div>
+          <div>
+            <p class="font-semibold text-sm">Eka</p>
+            <p class="text-xs text-gray-500">User</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="snap-start min-w-[280px] md:min-w-[350px] bg-white border border-gray-200 rounded-xl p-6">
+        <div class="text-yellow-400 mb-3">★★★★★</div>
+        <p class="text-gray-600 text-sm">
+          Sistem terbaik yang pernah saya gunakan untuk manajemen perpustakaan digital.
+        </p>
+        <div class="flex items-center gap-3 mt-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">F</div>
+          <div>
+            <p class="font-semibold text-sm">Fajar</p>
+            <p class="text-xs text-gray-500">Admin</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BUTTON RIGHT -->
+    <button onclick="scrollRightFn()" 
+      class="absolute right-0 top-1/2 -translate-y-1/2 z-10 
+             bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center">
+      ❯
+    </button>
+
+    <!-- DOTS -->
+    <div class="flex justify-center gap-2 mt-6">
+      <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+      <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+      <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+const slider = document.getElementById('slider');
+const dots = document.querySelectorAll(".dot");
+
+const cardWidth = 350;
+const totalDots = dots.length;
+
+function scrollLeftFn() {
+  slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+}
+
+function scrollRightFn() {
+  slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+}
+
+function updateDots() {
+  const index = Math.round(slider.scrollLeft / cardWidth);
+  const activeIndex = index % totalDots;
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[activeIndex].classList.add("active");
+}
+
+slider.addEventListener("scroll", updateDots);
+updateDots();
+</script>
+
+<style>
+.dot.active {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  width: 22px;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+</style>
+
+</body>
+</html>
